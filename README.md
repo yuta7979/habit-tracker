@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# Habit Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GitHub Pages URL: https://yuta7979.github.io/habit-tracker/
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## アプリの概要
 
-## React Compiler
+「Habit Tracker」は、日々の習慣を管理できる React 製の Todo アプリです。  
+習慣の名前、曜日、開始時間・終了時間を設定でき、カレンダー上で今日や指定した曜日の習慣を確認・管理できます。
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 主な機能
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **習慣の追加**
+  - 習慣名、曜日、開始時間・終了時間を設定可能
+- **カレンダー表示**
+  - 習慣の設定された曜日が青色で表示され、時間も確認可能
+  - 週単位で表示、チェックは手動で行える
+  - 設定されていない曜日はチェック不可
+- **本日の日付表示**
+  - タイトル下に本日の日付と曜日を表示
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 画面例（スクリーンショット）
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1. 習慣追加フォーム
+![スクリーンショット1](./screenshots/form.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. カレンダー表示
+![スクリーンショット2](./screenshots/calendar.png)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3. 習慣設定例
+![スクリーンショット3](./screenshots/example.png)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+※ スクリーンショットは `./screenshots/` フォルダに保存してください。
+
+---
+
+## 開発で工夫した点
+
+- カレンダーは **週単位で動的に生成**  
+- 設定された曜日にだけ青色で表示することで、視覚的に分かりやすくした  
+- 時間を設定するとカレンダーに表示され、習慣管理の精度を向上  
+- チェックはカレンダー上でのみ可能にし、フォームのチェックは非表示に変更
+
+---
+
+## 技術スタック
+
+- **フレームワーク:** React 19
+- **ビルドツール:** Vite 7
+- **言語:** TypeScript
+- **スタイル:** CSS / Inline Style
+- **デプロイ:** GitHub Pages
+- **ESLint:** コード整形・チェック用
+
+---
+
+## 開発期間
+
+開発期間: 2025.11.6 ~ 2025.11.19（約 23 時間）
