@@ -27,14 +27,16 @@ GitHub Pages URL: https://yuta7979.github.io/habit-tracker/
 ## 画面例（スクリーンショット）
 
 ### 1. 習慣追加フォーム
-![スクリーンショット1](./screenshots/form.png)
+![スクリーンショット1](./screenshots/Part1.png)
 
 ### 2. カレンダー表示
-![スクリーンショット2](./screenshots/calendar.png)
+![スクリーンショット2](./screenshots/Part2.png)
 
 ### 3. 習慣設定例
-![スクリーンショット3](./screenshots/example.png)
+![スクリーンショット3](./screenshots/Part3.png)
 
+### 4. 習慣設定例
+![スクリーンショット3](./screenshots/Part4.png)
 
 
 ---
