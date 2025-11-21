@@ -35,7 +35,7 @@ GitHub Pages URL: https://yuta7979.github.io/habit-tracker/
 ### 3. 習慣設定例
 ![スクリーンショット3](./screenshots/example.png)
 
-※ スクリーンショットは `./screenshots/` フォルダに保存してください。
+
 
 ---
 
